@@ -1,0 +1,5 @@
+{
+  "id": "google-auth",
+  "label": "Google OAuth",
+  "contributes": ["auth"]
+}
