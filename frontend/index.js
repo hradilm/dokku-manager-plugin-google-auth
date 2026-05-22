@@ -19,9 +19,8 @@ export default {
     {
       id: 'google-auth-settings',
       label: 'Google OAuth',
-      tab: 'auth',
-      tabLabel: 'Authentication',
-      tabOrder: 10,
+      slot: 'auth',
+      providerId: 'google',
       component: GoogleAuthSettings,
       order: 0,
     },
