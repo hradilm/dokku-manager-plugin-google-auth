@@ -19,10 +19,13 @@ export default {
     {
       id: 'google-auth-settings',
       label: 'Google OAuth',
+      tab: 'extensions',
+      tabLabel: 'Extensions',
+      tabOrder: 99,
       slot: 'auth',
       providerId: 'google',
       component: GoogleAuthSettings,
-      order: 0,
+      order: 1,
     },
   ],
 };
