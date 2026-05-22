@@ -13,6 +13,11 @@ const GOOGLE_USERINFO_URL = 'https://www.googleapis.com/oauth2/v3/userinfo';
 const CACHE_TTL = 30_000;
 
 function register(ctx) {
+  // Skip registration entirely when the required env vars are absent at startup.
+  // This lets local-auth (or any other provider) take over without google-auth
+  // shadowing it just because it sorts first alphabetically.
+  if (!process.env.GOOGLE_CLIENT_ID) return;
+
   const dokku = ctx.host.dokku;
 
   let cfgCache = null;
