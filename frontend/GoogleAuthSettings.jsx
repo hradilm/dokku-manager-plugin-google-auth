@@ -36,7 +36,7 @@ export default function GoogleAuthSettings({ appConfig, managerAppName, fetchCon
         return;
       }
 
-      const res = await fetch(`/api/${encodeURIComponent(managerAppName)}/config`, {
+      const res = await fetch(`/api/apps/${encodeURIComponent(managerAppName)}/config`, {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
