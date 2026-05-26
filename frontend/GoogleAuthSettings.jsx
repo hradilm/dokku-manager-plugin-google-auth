@@ -114,10 +114,11 @@ export default function GoogleAuthSettings({ appConfig, managerAppName, fetchCon
         ) : (
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="google-client-id" className="block text-sm font-medium text-gray-700 mb-1">
                 Google Client ID
               </label>
               <input
+                id="google-client-id"
                 type="text"
                 value={form.clientId}
                 onChange={(e) => setForm((f) => ({ ...f, clientId: e.target.value }))}
@@ -127,10 +128,11 @@ export default function GoogleAuthSettings({ appConfig, managerAppName, fetchCon
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="google-client-secret" className="block text-sm font-medium text-gray-700 mb-1">
                 Google Client Secret
               </label>
               <input
+                id="google-client-secret"
                 type="password"
                 value={form.clientSecret}
                 onChange={(e) => setForm((f) => ({ ...f, clientSecret: e.target.value }))}
@@ -140,10 +142,11 @@ export default function GoogleAuthSettings({ appConfig, managerAppName, fetchCon
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="google-callback-url" className="block text-sm font-medium text-gray-700 mb-1">
                 Callback URL
               </label>
               <input
+                id="google-callback-url"
                 type="url"
                 value={form.callbackUrl}
                 onChange={(e) => setForm((f) => ({ ...f, callbackUrl: e.target.value }))}
